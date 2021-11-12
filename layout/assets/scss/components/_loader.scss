@@ -1,0 +1,50 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $main_color;
+    z-index: 999999999999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+
+    &.fade {
+        animation: fade 5s alternate infinite ease-in-out;
+        
+      
+    }
+
+    span {
+        color: white;
+        display: inline-block;
+        animation: pulse 0.4s alternate infinite ease-in-out;
+        font-size: 150px;
+        font-family: 'Source Serif Pro', serif !important;
+
+        &:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+    }
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        
+    }
+}
